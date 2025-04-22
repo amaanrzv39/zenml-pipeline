@@ -5,12 +5,10 @@ from steps.train_model import train_model
 from steps.evaluate_model import evaluate_model
 
 @pipeline
-def training_pipeline(data_path: str):
+def training_pipeline():
     """Define the training pipeline."""
-    # Ingest data
-    data = ingest_data(data_path=data_path)
-    
-    # Clean data
-    clean_data(data)
-    train_model(data)
-    evaluate_model(data)
+   
+    data = ingest_data()
+    X_train, X_test, y_train, y_test = clean_data(data)
+    model = train_model(X_train, X_test, y_train, y_test)
+    mse, r2, rmse = evaluate_model(model, X_test, y_test)

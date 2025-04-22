@@ -19,6 +19,7 @@ def clean_data(data: pd.DataFrame) -> Tuple[
         data_divide = DataCleaning(cleaned_data, DataDivideStrategy())
         X_train, X_test, y_train, y_test = data_divide.handle_data()
         logging.info("Data cleaning and division completed successfully.")
+        return X_train, X_test, y_train, y_test
     except Exception as e:
         logging.error(f"Error in data cleaning and splitting: {e}")
         raise e

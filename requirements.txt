@@ -5,7 +5,7 @@ matplotlib
 seaborn
 scipy
 statsmodels
-zenml [server]
+zenml
 flask
 streamlit
 catboost

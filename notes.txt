@@ -1,0 +1,6 @@
+zenml integration install mlflow -y
+zenml experiment-tracker register mlflow_tracker --flavor=mlflow
+zenml model-deployer register mlflow --flavor=mlflow
+zenml stack register mlflow_stack -a default -o default -d mlflow -e mlflow_tracker --set
+
+mlflow ui --backend-store-uri file:///Users/nanu/Library/Application%20Support/zenml/local_stores/46aa9180-e4d8-4994-b4b4-3276d150bdc7/mlruns
