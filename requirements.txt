@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+scipy
+statsmodels
+zenml [server]
+flask
+streamlit
+catboost
+optuna
